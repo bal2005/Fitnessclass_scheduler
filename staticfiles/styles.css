@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Standard background color */
+}
+
+.app-header {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 120px; /* Adjust to avoid overlap with fixed header */
+}
+
+.center-content {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instruction {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mini-calendar {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.btn-view-schedules, .btn-delete, .btn-clear, .btn-back {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-delete, .btn-clear {
+    background-color: #ff4d4d;
+}
+
+.btn-clear {
+    background-color: #ff6666;
+}
+
+.btn-back {
+    background-color: #4CAF50; /* Green */
+}
+
+.custom-event {
+    background-color: #4CAF50 !important; /* Green */
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: url("../images/banner11.jpg") no-repeat center top;
+    background-size: cover;
+    padding: 16% 0 0 0;
+}
+
+.header-text {
+    background: rgba(33, 191, 252, 0.35);
+    width: 80%;
+    padding: 2%;
+    border-bottom: 5px solid #02b6fc;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-text h1 {
+    color: #fff;
+    font-size: 3.6em;
+    text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+    -webkit-text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+    -moz-text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+    -o-text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+}
+
+.header-text h2 {
+    color: #fff;
+    font-size: 2.4em;
+    text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+    -webkit-text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+    -moz-text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+    -o-text-shadow: -1px 0px 1px rgba(214, 214, 214, 0.59);
+}
+
+.header-text p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.banner_btn a {
+    color: #fff;
+    background: #02b6fc;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.header-arrow a {
+    color: #02b6fc;
+    font-size: 2em;
+}
+
+.header-bottom {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bottom_left {
+    display: flex;
+    align-items: center;
+}
+
+.header-bottom_left .phone {
+    margin-right: 10px;
+}
+
+.social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.social ul li {
+    margin-right: 10px;
+}
+
+.social ul li a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4CAF50; /* Green */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
