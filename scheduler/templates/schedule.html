@@ -1,0 +1,25 @@
+<!-- filepath: /d:/Fitness_Scheduler/fitness_scheduler/scheduler/templates/schedule.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Class</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule a Class</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="title">Class Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" value="{{ date }}" readonly>
+            <button type="submit" class="btn-schedule">Schedule</button>
+        </form>
+        <a href="{% url 'index' %}" class="btn-back">Back to Calendar</a>
+    </div>
+</body>
+</html>

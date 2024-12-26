@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Class Scheduler</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>FitScheduleX</h1>
+    </header>
+
+    <div class="container">
+        <h1>Fitness Class Scheduler</h1>
+        <div class="main-content">
+            <p class="instruction">Click on the calendar to schedule a class.</p>
+            <a href="{% url 'view_schedules' %}" class="btn-view-schedules">View Scheduled Classes</a>
+        </div>
+        <div class="mini-calendar">
+            <div id='calendar'></div>
+        </div>
+    </div>
+
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                dateClick: function(info) {
+                    window.location.href = `/schedule?date=${info.dateStr}`;
+                },
+                events: '/get_events/'
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Success</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'scheduler/schedule_success.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Class Scheduled Successfully</h1>
+        <p>You have successfully scheduled <strong>{{ title }}</strong> on <strong>{{ date }}</strong>.</p>
+        <a href="{% url 'index' %}" class="btn-back">Back to Calendar</a>
+    </div>
+</body>
+</html>

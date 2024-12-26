@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Schedules</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'scheduler/view_schedules.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Scheduled Classes</h1>
+        <ul>
+            {% for schedule in schedules %}
+                <li>
+                    {{ schedule.title }} on {{ schedule.date }}
+                    <form action="{% url 'delete_schedule' schedule.id %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-delete">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <form action="{% url 'clear_all_schedules' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn-clear">Clear All Schedules</button>
+        </form>
+        <br>
+        <a href="{% url 'index' %}" class="btn-back">Back to Calendar</a>
+    </div>
+</body>
+</html>
